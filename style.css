@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.box-two {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    animation: moveCorners 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+
+}
+
+@keyframes moveCorners {
+    0% {
+        top: 0;
+        left: 0;
+        background-color: red;
+    }
+
+
+    25% {
+        top: calc(100% - 100px);
+        left: 0;
+        background-color: blue;
+    }
+
+    50% {
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+        background-color: green;
+    }
+
+    75% {
+        top: 0;
+        left: calc(100% - 100px);
+        background-color: yellow;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+        background-color: red;
+    }
+}
